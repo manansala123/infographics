@@ -3,133 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Empowerment Technologies Infographic</title>
+  <title>E‑Tech Infographics</title>
   <style>
-    /* === Base Reset === */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #eef4fb, #d6e6ff);
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
       color: #333;
-      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
-
     header {
-      background: #0044cc;
+      position: relative;
+      background: linear-gradient(135deg,#2a9df4,#1765c0);
       color: white;
       text-align: center;
-      padding: 60px 20px;
-      animation: slideDown 1s ease-in-out both;
+      padding: 80px 20px;
+      clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
     }
-
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 3.2rem;
+      animation: fadeIn 1s ease-out both;
     }
-
     header p {
+      margin-top: 10px;
       font-size: 1.2rem;
-      opacity: 0.9;
+      animation: fadeIn 1.2s ease-out both;
     }
 
     .container {
       max-width: 1200px;
-      margin: 50px auto;
+      margin: -40px auto 60px;
       padding: 0 20px;
       display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
       gap: 40px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .card {
       background: white;
-      border-radius: 15px;
+      border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       position: relative;
-      opacity: 0;
       transform: translateY(50px);
-      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+      animation: riseUp 0.8s ease-out forwards;
     }
-
-    .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.4s; }
-    .card:nth-child(4) { animation-delay: 0.6s; }
-    .card:nth-child(5) { animation-delay: 0.8s; }
-    .card:nth-child(6) { animation-delay: 1s; }
+    .card:nth-child(1){ animation-delay: 0.2s; }
+    .card:nth-child(2){ animation-delay: 0.4s; }
+    .card:nth-child(3){ animation-delay: 0.6s; }
+    .card:nth-child(4){ animation-delay: 0.8s; }
+    .card:nth-child(5){ animation-delay: 1s; }
+    .card:nth-child(6){ animation-delay: 1.2s; }
 
     .icon {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      width: 60px; height: 60px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: #e0f0ff;
       margin-bottom: 20px;
-      animation: floatIcon 3s infinite ease-in-out;
+      animation: float 3s ease-in-out infinite;
     }
 
     h2 {
-      margin-bottom: 15px;
-      font-size: 1.6rem;
-      color: #0044cc;
+      font-size: 1.5rem;
+      color: #1765c0;
+      margin-bottom: 12px;
     }
-
     p, ul {
       font-size: 1rem;
       line-height: 1.6;
     }
-
     ul {
       list-style: none;
+      margin-left: 0;
       padding-left: 0;
     }
-
     ul li::before {
       content: "✔";
-      margin-right: 10px;
-      color: #00aa88;
+      margin-right: 8px;
+      color: #29a19c;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #f0f5ff;
-      margin-top: 60px;
+      background: #e8eef5;
       font-size: 0.95rem;
-      color: #555;
+      color: #666;
     }
 
     /* === Animations === */
-    @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes riseUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
 
-    @keyframes fadeInUp {
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes floatIcon {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    /* === Responsive Adjustments === */
     @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
+      header h1 { font-size: 2.4rem; }
       header p { font-size: 1rem; }
+      .icon { width: 50px; height: 50px; font-size: 2.5rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Empowerment Technologies (E-Tech)</h1>
-    <p>Animated Infographics to Understand the Digital World</p>
+    <h1>Empowerment Technologies (E‑Tech)</h1>
+    <p>Interactive Infographics with Smooth Animations</p>
   </header>
 
   <main class="container">
-
     <section class="card">
       <div class="icon">💻</div>
-      <h2>What is E-Tech?</h2>
-      <p>Empowerment Technology refers to the use of digital tools and ICT to help individuals and communities enhance their learning, communication, and productivity in a digital society.</p>
+      <h2>What is E‑Tech?</h2>
+      <p>Use of digital and ICT tools to enhance learning, communication, and productivity in modern society.</p>
     </section>
 
     <section class="card">
@@ -137,33 +134,33 @@
       <h2>Key Topics</h2>
       <ul>
         <li>Digital Tools & Platforms</li>
-        <li>Multimedia & Web Design</li>
+        <li>Web & Multimedia Creation</li>
         <li>Responsible Internet Use</li>
-        <li>Cybersecurity & Ethics</li>
+        <li>Cybersecurity & Online Ethics</li>
       </ul>
     </section>
 
     <section class="card">
       <div class="icon">💡</div>
       <h2>Why It Matters</h2>
-      <p>Understanding E-Tech equips you with skills for the 21st century: creativity, critical thinking, and digital responsibility in a connected world.</p>
+      <p>Develops critical 21st-century skills: creativity, digital literacy, and responsible online behavior.</p>
     </section>
 
     <section class="card">
       <div class="icon">🛠️</div>
-      <h2>Tools You Learn</h2>
+      <h2>Tools You’ll Learn</h2>
       <ul>
-        <li>HTML & CSS</li>
-        <li>Google Apps & Docs</li>
-        <li>Photo Editing Tools</li>
-        <li>Presentation & Publishing</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Google Suite (Docs, Slides)</li>
+        <li>Photo/Video Editing</li>
+        <li>Content Creation & Publishing</li>
       </ul>
     </section>
 
     <section class="card">
-      <div class="icon">🧠</div>
+      <div class="icon">🧭</div>
       <h2>Digital Citizenship</h2>
-      <p>Learn how to be a smart, safe, and respectful citizen in online communities, including social media and digital communication.</p>
+      <p>Navigate online spaces safely, ethically, and with respect for others.</p>
     </section>
 
     <section class="card">
@@ -171,17 +168,10 @@
       <h2>Future-Ready Skills</h2>
       <ul>
         <li>Effective Communication</li>
-        <li>Content Creation</li>
-        <li>Problem Solving</li>
+        <li>Problem-Solving with Tech</li>
+        <li>Content Production</li>
         <li>Digital Entrepreneurship</li>
       </ul>
     </section>
-
   </main>
 
-  <footer>
-    © 2025 Empowerment Technologies Infographics. Designed for students and educators.
-  </footer>
-
-</body>
-</html>
